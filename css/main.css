@@ -1,0 +1,982 @@
+/*RESET CSS BEGIN*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: 'montserrat', sens-sarif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/*RESET CSS END*/
+
+
+/*HELPER CLASS BEGIN*/
+
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+p,
+ul li,
+ol li {
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 20px 0;
+}
+
+ul li,
+ol li {
+    margin-bottom: 10px;
+}
+
+
+/*HELPER CLASS END*/
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+/*wrapper*/
+.wrapper{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+/*Navigation Bar Styles Starts Here*/
+
+header{
+    width: 100%;
+    position: relative;
+    background: transparent;
+}
+header.sticky{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: black;
+    transform: translateY(-200%);
+    z-index: 5;
+}
+body.scroll header.sticky{
+    transform: translateY(0);
+    transition: 1s;
+    opacity: 0.95;
+
+}
+.nav-wrapper{
+    max-width: 1200px;
+    padding: 7px 0;
+     position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-wrapper ul li{
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 0px;
+
+}
+
+.nav-wrapper ul li a{
+font-size: 16px;
+line-height: 5px;
+text-decoration: none;
+cursor: pointer;
+color: white;
+border-bottom: 1px solid transparent;
+padding-bottom: 3px;
+transition: 0.5s;
+}
+.nav-wrapper ul li a:hover{
+ border-bottom: 1px solid white;   
+}
+
+#logo{
+    max-height: 100px;
+    max-width: 100px;
+    padding: 0px 20px;    
+}
+
+/*parallax page style*/
+
+.cover-main{
+background:linear-gradient(rgba(1, 1, 1, 0.5),rgba(1, 1, 1, 0.5)), url('../images/hero-bg.jpg') right bottom;
+height: 60vh;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+ul#scene li.name{
+text-align: center;
+font-size: 40px;
+line-height: 45px;
+color: white;
+width: 100%;
+}
+
+ul#scene li.title{
+text-align: center;
+font-size: 30px;
+line-height: 35px;
+color: white;
+margin-top: 70px;
+width: 100%;
+}
+ul#scene{
+    margin-top: 100px;
+}
+.btn{
+    width: 100%;
+    text-align: center;
+    margin-top: 150px;
+}
+
+div.logo{
+border: 1px solid white;
+border-radius: 30px;
+background-color: white;
+opacity: 0.8;
+transition: 0.3s;
+}
+
+.prtbtn, .ctbtn{
+    border: 1px solid white;
+    padding: 15px  15px;
+    display: inline-block;
+    margin-left: 30px;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.prtbtn{
+    margin-right: 30px;
+}
+.ctbtn{
+    margin-left: 30px;
+}
+.prtbtn:hover ,.ctbtn:hover{
+    background-color: white;
+    color: black;
+}
+/*work protfolio*/
+.masonry-grid{
+    position: relative;
+}
+
+.grid{
+    margin: 0 auto;
+}
+
+.grid-item{
+  width: 450px;
+  margin-bottom: 10px;
+  
+}
+.tall-img {
+
+  height: 680px;
+
+}
+
+
+h2.sub-title {
+
+  position: relative;
+  display: block;
+  margin: 70px auto;
+  text-align: center;
+  font-size: 35px;
+  line-height: 40px;
+
+}
+
+h2.sub-title::after {
+
+  display: block;
+  height: 2px;
+  background-color: #000000;
+  content: "";
+  width: 100px;
+  margin: 30px auto 0 auto;
+
+}
+
+img{
+
+max-width: 100%;
+
+}
+
+/*inforamtion*/
+
+.info p{
+    font-size: 20px;
+    line-height: 30px;
+    color: white;   
+}
+
+.info p.pname{
+
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 45px;
+    
+}
+
+.skills{
+    font-size: 30px;
+    color: white;
+    margin-left: 15px;
+    line-height: 40px;
+}
+
+.skills1{
+    font-size: 30px;
+    color: white;
+    margin-left: 15px;
+    line-height: 40px;
+}
+
+.skills1::after{
+
+display: block;
+  height: 2px;
+  background-color: white;
+  content: "";
+  width: 150px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  
+}
+.skills::after{
+
+display: block;
+  height: 2px;
+  background-color: white;
+  content: "";
+  width: 150px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  
+}
+/*about-- beating heart*/
+section.beating-heart{
+  background: linear-gradient(rgb(0,0,0,0.7),rgb(0,0,0,0.7)),url('../images/hero-bg.jpg') no-repeat right bottom / cover;
+  height: auto;
+  padding: 50px 10px;
+  color: white;
+ height: 100%;
+ display: flex;
+  
+}
+.heart{
+    position: relative;
+    height: 150px;
+    margin: 0 50px;
+    fill: red;
+    -webkit-animation: pulse 1s infinite;
+    animation: pulse 1s infinite;
+}
+@-webkit-keyframes pulse{
+    0%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    15% {
+          -webkit-transform: scale(1.25);
+                  transform: scale(1.25);
+      }
+
+      25% {
+        -webkit-transform: scale(1.15);
+                transform: scale(1.15);
+      }
+
+      35% {
+          -webkit-transform: scale(1.25);
+                  transform: scale(1.25);
+      }
+
+      100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+      }
+}
+section.beating-heart h2.sub-title::after{
+
+display: block;
+  height: 2px;
+  background-color: white;
+  content: "";
+  width: 150px;
+  margin-bottom: 30px;  
+}
+section.beating-heart span{
+    font-size: 100px;
+    line-height: 105px;
+    margin-bottom: 300px;
+}
+
+/*slider*/
+.slider-div h2 {
+  margin-bottom: 0;
+}
+
+.slider {
+  margin: 55px auto ;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.slide {
+  max-height: 300px;
+  padding: 15px;
+}
+
+.slick-prev,
+.slick-next {
+  background: black;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: black;
+}
+/*footer*/
+
+#lab_social_icon_footer {
+  padding: 40px 700px;
+  background-color: black;
+}
+
+#lab_social_icon_footer a {
+  color: white;
+}
+
+ .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+  
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  color: red;
+}
+/*
+    Multicoloured Hover Variations
+*/
+
+#social-fb:hover {
+  color: #3B5998;
+}
+
+#social-tw:hover {
+  color: white;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   height: 80px;
+   width: 100%;
+   background-color: black;
+   opacity: 0.9;
+   color: white;
+   text-align: center;
+}
+
+/*menu*/
+/*Responsive design*/
+@media only screen and (max-width: 1160px) {
+  section.beating-heart span {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  .heart {
+    width: 50px;
+    margin: 0 20px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .menu-trigger {
+        background: url('../images/hamburger-icon.svg') no-repeat center / cover;
+        width: 35px;
+        height: 35px;
+        display: block;
+        z-index: 10;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .main-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.72);
+        z-index: 6;
+        display: none;
+    }
+      .main-overlay::after{
+        background: url('../images/close-icon.svg') no-repeat center / cover;
+        width: 25px;
+        color: black;
+        height: 35px;
+        display: block;
+        content: "";
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        z-index: -3;
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: #131313;
+        width: 100%;
+        max-width: 300px;
+        z-index: 30;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+      }
+     nav.nav-wrapper ul li {
+        display: block;
+        margin-top: 0px;
+        padding: 0;
+        padding-bottom: 10px;
+      }
+
+      nav.nav-wrapper ul li a {
+        font-size: 15px;
+        line-height: 23px;
+      }
+
+      nav.nav-wrapper ul li a:hover {
+        border-color: transparent;
+      }
+
+      body.menu-is-active .menu {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+        display: block;
+        padding: 0 15px;
+      }
+
+      body.menu-is-active .main-overlay {
+        display: block;
+      }
+
+      body.menu-is-active .menu-trigger {
+        display: none;
+      }
+  h2#work {
+    margin: 85px auto;
+    font-size: 15px;
+    line-height: 15px;
+  }
+   h2.sub-title {
+    margin: 95px auto;
+    font-size: 15px;
+    line-height: 15px;
+  }
+div.logo{
+border: 1px solid white;
+border-radius: 30px;
+background-color: white;
+opacity: 0.8;
+height: 100px;
+transition: 0.3s;
+}
+.skills{
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+    line-height: 25px;
+}
+
+.info p{
+    font-size: 15px;
+    line-height: 20px;
+    color: white;   
+}
+
+.info p.pname{
+
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 20px;
+    
+}
+
+  h2.sub-title {
+    margin: 30px auto;
+    font-size: 23px;
+    line-height: 28px;
+  }
+span{
+  font-size: 15px;
+  color: white;
+}
+.heart{
+    position: relative;
+    height: 80px;
+    margin: 10px 50px;
+    fill: red;
+    -webkit-animation: pulse 1s infinite;
+    animation: pulse 1s infinite;
+}
+@-webkit-keyframes pulse{
+    0%{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    15% {
+          -webkit-transform: scale(1.25);
+                  transform: scale(1.25);
+      }
+
+      25% {
+        -webkit-transform: scale(1.15);
+                transform: scale(1.15);
+      }
+
+      35% {
+          -webkit-transform: scale(1.25);
+                  transform: scale(1.25);
+      }
+
+      100% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+      }
+}
+}
+/*tablet ends*/
+
+@media only screen and (max-width: 560px) {
+
+  ul#scene li.name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  ul#scene li.title {
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 30px;
+  }
+
+  div.grid {
+      width: initial !important;
+  }
+
+  .btn {
+    margin-top: 60px;
+    right: 200px;
+    font-size: 10px;
+  }
+
+  ul#scene {
+    margin-top: 40px;
+  }
+
+  .portfolio-btn,
+  .contact-btn {
+    display: inline-block;
+    margin: 30px 0;
+    max-width: 120px;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 10px 0;
+  }
+
+  h2.sub-title {
+    margin: 30px auto;
+    font-size: 23px;
+    line-height: 28px;
+  }
+
+  section.beating-heart {
+    height: initial;
+  }
+
+
+  
+
+  .grid-item {
+      width: initial;
+  }
+
+  .tall-img {
+    height: initial;
+  }
+
+  .menu {
+    max-width: 200px;
+  }
+
+ .lab_social_icon_footer{
+    max-width: 100px;
+ } 
+.info p{
+    font-size: 15px;
+    line-height: 20px;
+    color: white;   
+}
+
+.info p.pname{
+
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 45px;
+    
+}
+
+ h2#work {
+    margin: 85px auto;
+    font-size: 15px;
+    line-height: 15px;
+  }
+   h2.sub-title {
+    margin: 95px auto;
+    font-size: 15px;
+    line-height: 15px;
+  }
+div.logo{
+border: 1px solid white;
+border-radius: 30px;
+background-color: white;
+opacity: 0.8;
+height: 100px;
+transition: 0.3s;
+}
+.skills{
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+    line-height: 25px;
+}
+
+
+  h2.sub-title {
+    margin: 30px auto;
+    font-size: 23px;
+    line-height: 28px;
+  }
+}
+ 
+ @media only screen and (max-width: 414px) {
+
+  ul#scene li.name {
+    font-size: 20px;
+    line-height: 20px;
+  }
+p{
+  font-size: 10px;
+}
+span{
+  font-size: 10px;
+  
+}
+  ul#scene li.title {
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 30px;
+  }
+
+  div.grid {
+      width: initial !important;
+  }
+
+  .btn {
+    margin-top: 60px;
+    right: 200px;
+    font-size: 10px;
+  }
+
+  ul#scene {
+    margin-top: 40px;
+  }
+
+  .portfolio-btn,
+  .contact-btn {
+    display: inline-block;
+    margin: 30px 0;
+    max-width: 120px;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 10px 0;
+  }
+
+  h2.sub-title {
+    margin: 30px auto;
+    font-size: 23px;
+    line-height: 28px;
+  }
+
+  section.beating-heart {
+    height: initial;
+  }
+
+
+  
+
+  .grid-item {
+      width: initial;
+  }
+
+  .tall-img {
+    height: initial;
+  }
+
+  .menu {
+    max-width: 200px;
+  }
+
+ .lab_social_icon_footer{
+    max-width: 100px;
+ } 
+.info p{
+    font-size: 15px;
+    line-height: 20px;
+    color: white;   
+}
+
+.info p.pname{
+
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 45px;
+    
+}
+
+ h2#work {
+    margin: 85px auto;
+    font-size: 15px;
+    line-height: 15px;
+  }
+   h2.sub-title {
+    margin: 95px auto;
+    font-size: 15px;
+    line-height: 15px;
+  }
+div.logo{
+border: 1px solid white;
+border-radius: 30px;
+background-color: white;
+opacity: 0.8;
+height: 100px;
+transition: 0.3s;
+}
+.skills{
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+    line-height: 25px;
+}
+
+
+  h2.sub-title {
+    margin: 30px auto;
+    font-size: 23px;
+    line-height: 28px;
+  }
+}
+ 
